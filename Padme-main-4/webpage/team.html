@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our Team</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body data-title="Team">
+    <main>
+        <header>
+            <div id="header-placeholder"></div>
+            <div>  
+                <div class="team-text-container">
+                    <h1>Team</h1>
+                    <span>
+                        <!-- HER KAN TILFØJES BESKRIVENDE TEKST TIL TEAMET-->
+                    </span>
+                </div>
+            </div>
+            <div style="background-color: whitesmoke;">
+                <div class="team-container">
+                    <div class="portrait-wrapper" >
+                        <a href="/webpage/Staff/PerGludOvesen.html">
+                            <img src="/webpage/images/StaffPictures/Person.png"> 
+                            <span class="portrait-text">
+                                <span class="portrait-name">Per Glud Ovesen</span>
+                                <span class="portrait-role">Professor</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="portrait-wrapper">     
+                        <a href="/webpage/Staff/JensFuglsang.html">    
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Jens Fuglsang</span>
+                            <span class="portrait-role">Professor</span>
+                        </span>
+                        </a>
+                    </div>
+                  <div class="portrait-wrapper" >
+                        <a href="/webpage/Staff/UllaKampmannOpstrup.html">
+                            <img src="/webpage/images/StaffPictures/Person.png"> 
+                            <span class="portrait-text">
+                                <span class="portrait-name">Ulla Kampmann Opstrup</span>
+                                <span class="portrait-role">Associate professor</span>
+                            </span>
+                        </a>
+                    </div>
+                    <div class="portrait-wrapper">           
+                        <a href="/webpage/Staff/SineKnorr.html">
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Sine Knorr</span>
+                            <span class="portrait-role">Ph.D.</span>
+                        </span>
+                        </a>
+                    </div>
+                    <div class="portrait-wrapper"> 
+                        <a href="/webpage/Staff/StineBechSmedegaard.html">         
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Stine Bech Smedegaard</span>
+                            <span class="portrait-role">Ph.D.</span>
+                        </span>
+                        </a>
+                    </div>
+                     <div class="portrait-wrapper"> 
+                        <a href="/webpage/Staff/TineStorebjergKnudsen.html">         
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Tine Storebjerg Knudsen</span>
+                            <span class="portrait-role">Ph.D. student</span>
+                        </span>
+                        </a>
+                    </div>
+                     <div class="portrait-wrapper"> 
+                        <a href="/webpage/Staff/LouiseBirkSuder.html">         
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Louise Birk Suder</span>
+                            <span class="portrait-role">Ph.D. student</span>
+                        </span>
+                        </a>
+                    </div>
+                     <div class="portrait-wrapper"> 
+                        <a href="/webpage/Staff/LineSahlholdtHansen.html">         
+                        <img src="/webpage/images/StaffPictures/Person.png"> 
+                        <span class="portrait-text">
+                            <span class="portrait-name">Line Sahlholdt Hansen</span>
+                            <span class="portrait-role">Ph.D. student</span>
+                        </span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </header>
+    </main>
+    <footer></footer>
+
+    <script>
+        // Load the header
+        fetch('/webpage/header.html')
+            .then(res => res.text())
+            .then(html => {
+                const headerPlaceholder = document.querySelector('#header-placeholder');
+                headerPlaceholder.innerHTML = html;
+
+                // 🔥 This executes any <script> inside the fetched HTML
+                const scripts = headerPlaceholder.querySelectorAll('script');
+                scripts.forEach((script) => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('footer').innerHTML = data;
+            });
+        // Set the document title
+        document.title = document.body.getAttribute('data-title') + ' | PADME';
+    </script>
+</body>
+</html>

@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<main>
+    <body data-title="Projects">
+        <header>
+            <div id="header-placeholder"></div>
+        </header>
+
+        <div class="project-wrapper">
+            <div class="project-header">
+                <h1>PREPARE CHILD – AUH</h1>
+                <h3>Kan vægttab før graviditeten forebygge overvægt blandt børn? </h3>
+            </div>
+            <div class="project-wrapper-body">
+                <div class="project-body">
+                    <aside>
+                        <h2>Deltagerinformation</h2>
+                        <h4>Inklusionskriterier:</h4>
+                        <p>Par der ønsker ny graviditet indenfor 3 år, hvor følgende er gældende:
+                            <p><u>Kvinde</u></p>
+                            <ul>
+                                <li>Alder 18–38 år</li>
+                                <li>Har en før-graviditets BMI på 27,0-44,9 kg/m2</li>
+                                <li>Tilknyttet Aarhus Universitetshospital, Viborg Regionshospital 
+                                    eller Horsens Regionshospital som fødested </li>
+                            </ul>
+                            <p><u>Mand</u></p>
+                            <ul>
+                                <li>Er mellem 18-55 år</li>
+                                <li>Har et BMI på 18,5-44,9 kg/m2</li>     
+                            </ul>
+
+                            </p>
+                    </aside>
+        
+                        <div class="project-status">
+                            <h1>Projektstatus</h1>
+                            <li>Projektet startede i juni 2023. </li>
+                            <li> 44 ud af 140 deltagere er rekrutteret (senest opdateret 14.04.2025)</li>
+                        </div>
+                        <div class="project-purpose">
+                            <h1>Projektets formål</h1>
+                            <p>Prepare Child AUH er et forskningsprojekt, der undersøger, hvordan ændringer i livsstil 
+                                inden undfangelsen kan påvirke sundheden hos kommende forældre med overvægt – både mødre og fædre – 
+                                samt betydningen for graviditetsforløbet og barnets sundhed.
+                                Interventionen finder sted mellem to graviditeter, og deltagerne rekrutteres i forbindelse med deres 
+                                første graviditet. Det primære formål er at undersøge, om et vægttab opnået før en ny graviditet har en 
+                                positiv indvirkning på barnets sundhed – vurderet blandt andet ud fra måling af fedtmasse, epigenetik 
+                                og en række andre biologiske og kliniske parametre. Resultaterne sammenlignes både med søskende og med børn, 
+                                hvis forældre ikke har gennemgået en livsstilsintervention.
+                                </p>
+                        </div>
+                        <div class="project-upload">
+                            <a href="/webpage/Projects/ConcreteProjects/Projektformulering (1).pdf" download style="text-decoration: none; color: black;">
+                                <img src="/webpage/images/download.svg" alt="Download PDF" style="width: 24px; height: 24px; vertical-align: middle;">
+                                Download PDF
+                            </a></a>
+                        </div>
+                        <div class="project-researchers-funding">
+                            <h3>Forskere</h3>
+                            <p>
+                                <li>Louise Birk Suder</li>
+                                <li>Ulla Kampmann</li>
+                                <li>Per Glud Ovesen</li>
+                                <li>Kasper Jacobsen Kyng</li>
+                                <li>Jens Meldgaard Bruun</li>
+                                <li>Sine Knorr</li>
+                                <li>Jens Fuglsang</li>
+                                <li>Emma Kaalund</li>
+                                <li>Sandra Haugaard</li>
+                                <li>Johanne Vase</li>
+                                <li>Helle Nørgaard</li>
+                            </p>
+                            <h3>Finansiering</h3>
+                            <p>
+                                <li>Novo Nordisk Fonden</li>
+                                <li>Toyota Fonden</li>
+                                <li>Aarhus Universitet</li>
+                                <li>Steno Diabetes Center Aarhus</li>
+                                <li>Axel Muusfeldts Fond</li>
+                                <li>Lego Charity</li>
+                                <li>Pharma Nord</li>
+                                <li>Pharmo Vital</li>
+                            </p>
+                        </div>
+                    
+                </div>
+                <div class="project-contact-wrapper">
+                    <div class="project-contact">
+                        <h2>Kontakt</h2>
+                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 1">
+                        <h3>Navn</h3>
+                        <p>Indsæt stilling</p>
+                        <h3>Telefon</h3>
+                        <p>Indsæt telefonnummer</p>
+                        <h3>Mail</h3>
+                        <p>Indsæt mail</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <div class="scroll-indicator">
+            <div data-target=".project-status">
+                <span class="dot"></span>
+                <span class="label">Projektstatus</span>
+            </div>
+            <div data-target=".project-purpose">
+                <span class="dot"></span>
+                <span class="label">Projektformål</span>
+            </div>
+            <div data-target=".project-upload">
+                <span class="dot"></span>
+                <span class="label">PDF</span>
+            </div>
+            <div data-target=".project-contact">
+                <span class="dot"></span>
+                <span class="label">Kontakt</span>
+            </div>
+        </div>
+
+        <footer></footer>
+        <script>
+        fetch('/webpage/header.html')
+                .then(res => res.text())
+                .then(html => {
+                    const headerPlaceholder = document.querySelector('#header-placeholder');
+                    headerPlaceholder.innerHTML = html;
+
+                    // 🔥 This executes any <script> inside the fetched HTML
+                    const scripts = headerPlaceholder.querySelectorAll('script');
+                    scripts.forEach((script) => {
+                        const newScript = document.createElement('script');
+                        newScript.text = script.textContent;
+                        document.body.appendChild(newScript);
+                    });
+                });
+
+            fetch('/webpage/footer.html')
+                .then(response => response.text())
+                .then(data => {
+                    document.querySelector('footer').innerHTML = data;
+                });
+            // Set the document title
+            document.title = document.body.getAttribute('data-title') + ' | Padme';
+
+            // Scroll progress indicator functionality
+            const indicatorItems = document.querySelectorAll('.scroll-indicator div');
+            const sections = Array.from(indicatorItems).map(item => document.querySelector(item.dataset.target));
+
+            function updateIndicator() {
+                const scrollPosition = window.scrollY;
+                const viewportHeight = window.innerHeight;
+
+                sections.forEach((section, index) => {
+                    const sectionTop = section.offsetTop;
+                    const sectionBottom = sectionTop + section.offsetHeight;
+
+                    // Check if the section is visible or has been scrolled past
+                    if (sectionBottom > scrollPosition && sectionTop < scrollPosition + viewportHeight) {
+                        indicatorItems[index].classList.add('active'); // Mark as active
+                    } else if (sectionBottom <= scrollPosition) {
+                        indicatorItems[index].classList.add('active'); // Keep active for seen sections
+                    } else {
+                        indicatorItems[index].classList.remove('active'); // Remove active if not visible or seen
+                    }
+                });
+            }
+
+            indicatorItems.forEach((item, index) => {
+                item.addEventListener('click', () => {
+                    sections[index].scrollIntoView({ behavior: 'smooth' });
+                });
+            });
+
+            window.addEventListener('scroll', updateIndicator);
+            window.addEventListener('load', updateIndicator);
+            
+        </script>
+    </body>
+</main>
+</html>

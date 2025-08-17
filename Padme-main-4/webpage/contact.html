@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt | PADME</title>
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<body data-title="Contact">
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="contact-wrapper">
+            <div class="contact-header">
+                <h1>Contact</h1>
+                <span>
+                  <!-- HER KAN TILFØJES BESKRIVENDE TEKST TIL KONTAKT -->
+                </span>
+            </div>
+            <div class="contact-body-wrapper">
+                <div class="centered-container">
+                    <div class="contact-person">
+                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 1">
+                        <div class="contact-text">
+                            <h2>Sine</h2>
+                            <p>Indsæt titel</p>
+                            <p>Email: person1@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-person">
+                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 2">
+                        <div class="contact-text">
+                            <h2>Ulla</h2>
+                            <p>Indsæt titel</p>
+                            <p>Email: person2@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-person">
+                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 3">
+                        <div class="contact-text">
+                            <h2>Per</h2>
+                            <p>Indsæt titel</p>
+                            <p>Email: person3@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-person">
+                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 4">
+                        <div class="contact-text">
+                            <h2>Jens</h2>
+                            <p>Indsæt titel</p>
+                            <p>Email: person4@example.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-picture">
+                      <img src="/webpage/images/BilledeAfAUH.svg" alt="Group Picture" class="group-picture">
+                    </div>
+                </div>
+            </div> 
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        // Load the header
+        fetch('/webpage/header.html')
+            .then(res => res.text())
+            .then(html => {
+                const headerPlaceholder = document.querySelector('#header-placeholder');
+                headerPlaceholder.innerHTML = html;
+
+                // 🔥 This executes any <script> inside the fetched HTML
+                const scripts = headerPlaceholder.querySelectorAll('script');
+                scripts.forEach((script) => {
+                    const newScript = document.createElement('script');
+                    newScript.text = script.textContent;
+                    document.body.appendChild(newScript);
+                });
+            });
+
+        fetch('footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.querySelector('footer').innerHTML = data;
+            });
+        // Set the document title
+        document.title = document.body.getAttribute('data-title') + ' | PADME';
+    </script>
+</body>
+</html>
