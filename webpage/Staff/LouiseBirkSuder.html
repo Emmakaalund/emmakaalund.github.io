@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornavn Efternavn | PADME</title>
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="centered-container">
+            <div class="team-profile-container">
+                <div class="profile-picture">
+                    <img src="/webpage/images/StaffPictures/Person.png" alt="Fornavn Efternavn">
+                    <h1>Louise Birk Suder</h1>
+                    <p>Ph.D. student</p>
+                </div>
+                <div class="profile-description">
+                    <p>Louise is a clinical dietitian and Ph.D. student at Aarhus University and Steno Diabetes Center Aarhus.
+                         Her research focuses on health before and during pregnancy with the aim of preventing childhood overweight. 
+                        Louise is a part of the PREPARE CHILD – AUH study, focusing on prevention of childhood obesity through parental 
+                        lifestyle intervention initiated before conception.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        fetch('/webpage/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+        fetch('/webpage/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornavn Efternavn | PADME</title>
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="centered-container">
+            <div class="team-profile-container">
+                <div class="profile-picture">
+                    <img src="/webpage/images/StaffPictures/Person.png" alt="Fornavn Efternavn">
+                    <h1>Stine Bech Smedegaard</h1>
+                    <p>Ph.D.</p>
+                </div>
+                <div class="profile-description">
+                    <p>
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        fetch('/webpage/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+        fetch('/webpage/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

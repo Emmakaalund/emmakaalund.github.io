@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornavn Efternavn | PADME</title>
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="centered-container">
+            <div class="team-profile-container">
+                <div class="profile-picture">
+                    <img src="/webpage/images/StaffPictures/Person.png" alt="Fornavn Efternavn">
+                    <h1>Tine Storebjerg Knudsen</h1>
+                    <p>Associate Professor</p>
+                </div>
+                <div class="profile-description">
+                    <p>Tine is a medical doctor and a Ph.D. student at Aarhus University and Steno Diabetes Center Aarhus.
+                         Her research focuses on pre-pregnancy care for women with type 1 and type 2 diabetes, 
+                         aiming to improve maternal and child health outcomes. Her research interests also extend to the impact
+                          of diabetes on fertility.Tine is also a part of the DDBR2 study, where pregnancy outcome in women with
+                           pre-existing diabetes is seeked to be improved, combining a nationwide Diabetes Birth Registry and an 
+                           education intervention study.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        fetch('/webpage/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+        fetch('/webpage/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>

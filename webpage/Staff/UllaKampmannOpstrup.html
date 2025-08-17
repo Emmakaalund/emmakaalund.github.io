@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fornavn Efternavn | PADME</title>
+    <link rel="stylesheet" href="/webpage/styles.css">
+</head>
+<body>
+    <header>
+        <div id="header-placeholder"></div>
+    </header>
+    <main>
+        <div class="centered-container">
+            <div class="team-profile-container">
+                <div class="profile-picture">
+                    <img src="/webpage/images/StaffPictures/Person.png" alt="Fornavn Efternavn">
+                    <h1>Ulla Kampmann Opstrup</h1>
+                    <p>Associate Professor</p>
+                </div>
+                <div class="profile-description">
+                    <p>Ulla Kampmann is a specialist in diabetology at Steno Diabetes Center Aarhus and an associate
+                        professor within diabetes and metabolism, pathogenesis and treatment in diabetes in pregnancy, at
+                        Aarhus University. Her research areas are Clinical research, Diabetes, Insulin Resistance, Gestational Diabetes,
+                         and pre-existing Diabetes in Pregnancy. Through her work as a clinician, taking care of pregnant women with diabetes,
+                          she has a genuine interest in glucose metabolism and insulin resistance during pregnancy. 
+                          She is currently PI on the <b>PREPARE</b> study, focusing on prevention of childhood obesity through parental lifestyle intervention, 
+                          initiated before conception and on the <b>CHANGE-DM</b> study, aiming to optimize follow-up after GDM. Moreover, she is involved in the national 
+                          study <b>DDBR2/ETOS DM</b>, where pregnancy outcome in women with pre-existing diabetes is seeked to be improved, combining a nationwide Diabetes 
+                          Birth Registry and an education intervention study.
+                    </p>
+
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <div id="footer-placeholder"></div>
+    </footer>
+    <script>
+        fetch('/webpage/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header-placeholder').innerHTML = data;
+            });
+        fetch('/webpage/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-placeholder').innerHTML = data;
+            });
+    </script>
+</body>
+</html>
