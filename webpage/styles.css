@@ -51,6 +51,10 @@
         position: static !important;
         width: 100% !important;
         box-shadow: none !important;
+        display: none !important;
+    }
+    .dropdown-content.show {
+        display: block !important;
     }
     aside {
         width: 100% !important;
