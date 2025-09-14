@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kontakt | PADME</title>
-    <link rel="stylesheet" href="/webpage/styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <body data-title="Contact">
     <header>
@@ -21,7 +21,7 @@
             <div class="contact-body-wrapper">
                 <div class="centered-container">
                     <div class="contact-person">
-                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 1">
+                        <img src="./images/StaffPictures/Person.png" alt="Person 1">
                         <div class="contact-text">
                             <h2>Ulla Kampmann Opstrup</h2>
                             <p>Associate Professor, Phd, MD</p>
@@ -29,7 +29,7 @@
                         </div>
                     </div>
                     <div class="contact-person">
-                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 2">
+                        <img src="./images/StaffPictures/Person.png" alt="Person 2">
                         <div class="contact-text">
                             <h2>Per Glud Ovesen</h2>
                             <p>Professor, PhD, MD</p>
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="contact-person">
-                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 3">
+                        <img src="./images/StaffPictures/Person.png" alt="Person 3">
                         <div class="contact-text">
                             <h2>Jens Fuglsang</h2>
                             <p>Associate Professor, PhD, MD</p>
@@ -45,7 +45,7 @@
                         </div>
                     </div>
                     <div class="contact-person">
-                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 4">
+                        <img src="./images/StaffPictures/Person.png" alt="Person 4">
                         <div class="contact-text">
                             <h2>Sine Knorr</h2>
                             <p>PhD, MD</p>
@@ -53,7 +53,7 @@
                         </div>
                     </div>
                     <div class="contact-picture">
-                      <img src="/webpage/images/BilledeAfAUH.svg" alt="Group Picture" class="group-picture">
+                      <img src="./images/BilledeAfAUH.svg" alt="Group Picture" class="group-picture">
                     </div>
                 </div>
             </div> 
@@ -64,7 +64,7 @@
     </footer>
     <script>
         // Load the header
-        fetch('/webpage/header.html')
+        fetch('./header.html')
             .then(res => res.text())
             .then(html => {
                 const headerPlaceholder = document.querySelector('#header-placeholder');

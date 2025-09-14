@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/webpage/styles.css">
+    <link rel="stylesheet" href="./styles.css">
 </head>
 <main>
     <body data-title="Projects">
@@ -56,8 +56,8 @@
                                 </p>
                         </div>
                         <div class="project-upload">
-                            <a href="/webpage/Projects/ConcreteProjects/Projektformulering (1).pdf" download style="text-decoration: none; color: black;">
-                                <img src="/webpage/images/download.svg" alt="Download PDF" style="width: 24px; height: 24px; vertical-align: middle;">
+                            <a href="./Projects/ConcreteProjects/Projektformulering (1).pdf" download style="text-decoration: none; color: black;">
+                                <img src="./images/download.svg" alt="Download PDF" style="width: 24px; height: 24px; vertical-align: middle;">
                                 Download PDF
                             </a></a>
                         </div>
@@ -93,7 +93,7 @@
                 <div class="project-contact-wrapper">
                     <div class="project-contact">
                         <h2>Kontakt</h2>
-                        <img src="/webpage/images/StaffPictures/Person.png" alt="Person 1">
+                        <img src="./images/StaffPictures/Person.png" alt="Person 1">
                         <h3>Navn</h3>
                         <p>Indsæt stilling</p>
                         <h3>Telefon</h3>
@@ -127,7 +127,7 @@
 
         <footer></footer>
         <script>
-        fetch('/webpage/header.html')
+        fetch('../../header.html')
                 .then(res => res.text())
                 .then(html => {
                     const headerPlaceholder = document.querySelector('#header-placeholder');
@@ -142,7 +142,7 @@
                     });
                 });
 
-            fetch('/webpage/footer.html')
+            fetch('./footer.html')
                 .then(response => response.text())
                 .then(data => {
                     document.querySelector('footer').innerHTML = data;
