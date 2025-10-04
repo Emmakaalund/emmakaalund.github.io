@@ -621,14 +621,18 @@ aside {
 
 main {
     flex: 1;
-    padding-bottom: 5em; /* Add space for the fixed footer */
+    padding-bottom: 2em; 
 }
 
 /* Centered Container */
 .centered-container {
-    margin: 0 auto;
-    width: 50%;
-    text-align: left;
+     display: flex;
+     justify-content: space-between;
+  flex-wrap: wrap;   /* allow wrapping to next line */
+  margin: 0 auto;
+  width: 50%;
+  text-align: left;
+  gap: 1em; 
 }
 
 /* Scroll progress indicator styles */
@@ -672,4 +676,7 @@ main {
 /* Ensure the footer stays at the bottom */
 main {
     flex: 1; /* Pushes the footer to the bottom */
+}
+body {
+    line-height: 1.8;
 }
