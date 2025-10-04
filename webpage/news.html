@@ -16,7 +16,7 @@
         </header>
         <div class="news-columns-wrapper">
             <div class="news-column" id="publications-column">
-                <h2>Publications</h2>
+                <h2>Selected publications</h2>
                 <div class="news-items" id="publications-list">
                     <!-- News items will be inserted here by JS -->
                 </div>
@@ -59,18 +59,17 @@
 
         // Example news data
         const publications = [
-            { title: "Ny publikation", content: "Her skriver man en opsummering af publikationen" },
-            { title: "Publication 1", content: "Summary of publication 1." },
-            { title: "Publication 2", content: "Summary of publication 2." },
-            { title: "Publication 3", content: "Summary of publication 3." },
+            { title: "Premeal Whey Protein Lowers Postprandial Blood Glucose in Women With Gestational Diabetes Mellitus: A Randomized, Crossover Clinical Trial", content: "Smedegaard S, Kampmann U, Ovesen PG, Suder LB, Knudsen JH, Wegener G, Brunsgaard LH, Rittig N. Diabetes Care. 2025 Jun 1;48(6):1022-1031. doi: 10.2337/dc24-2831. PMID: 40261798." },
+            { title: "Shortcut to the needle in the haystack? Screening for maturity onset diabetes of the young in a population of women with gestational diabetes", content: "Knorr S, Knudsen LL, Madsen AL, Madsen LR, Mortensen L, Thomsen HH, Sørensen LP, Ovesen PG, Fulgsang J, Kampmann U. Diabet Med. 2025 May;42(5):e70021. doi: 10.1111/dme.70021. Epub 2025 Mar 7. PMID: 40051305." },
+            { title: "Breastfeeding and infant growth in relation to childhood overweight - a longitudinal cohort study", content: "Leth-Møller M, Kampmann U, Hede S, Ovesen PG, Hulman A, Knorr S. Am J Clin Nutr. 2025 Apr;121(4):835-842. doi: 10.1016/j.ajcnut.2025.01.020. Epub 2025 Jan 23. PMID: 39863115." },
+            { title: "Prepregnancy and Gestational Interventions to Prevent Childhood Obesity", content: "Kampmann U, Suder LB, Nygaard M, Geiker NRW, Nielsen HS, Almstrup K, Bruun JM, Magkos F, Ovesen J, Catalano P. J Clin Endocrinol Metab. 2024 Dec 18;110(1):e8-e18. doi: 10.1210/clinem/dgae724. PMID: 39401333." },
             { title: "Publication 4", content: "Summary of publication 4." }
         ];
         const activities = [
-            { title: "Ny aktivitet", content: "Her skriver man en opsummering af aktiviteten" },
-            { title: "Activity 1", content: "Summary of activity 1." },
-            { title: "Activity 2", content: "Summary of activity 2." },
-            { title: "Activity 3", content: "Summary of activity 3." },
-            { title: "Activity 4", content: "Summary of activity 4." }
+            { title: "The DPSG annual metting 2025", content: "Her skriver man en opsummering af aktiviteten." },
+            { title: "5th Swedish Diabetes Summit", content: "Noget med at Ninna Lund Larsen var afsted." },
+            { title: "PADME meetings in autumn semester 2025", content: "23.09.25 (PADME website workshop), 28.10.25 (Presentation of Research Year-project by Johanne Vase), 19.11.25 (Presentation of Research Year-project by Sandra Haugaard Christensen), 17.12.25 (LinkedIn: Tips and Best Practices led by Line Sahlholdt Hansen)" },
+            { title: "PADME journal clubs in autumn semester 2025", content: "23.09.25 (Presenter: Tine Storebjerg Knudsen), 28.10.25 (Presenter: Line Sahlholdt Hansen), 19.11.25 (Presenter: Victoria Bøttker), 17.12.25 (Presenter: Louise Birk Suder)" },
         ];
 
         function renderNews(list, containerId, page, perPage) {
