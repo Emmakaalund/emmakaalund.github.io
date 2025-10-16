@@ -188,6 +188,9 @@ body::after {
         max-width: 100%;
     }
 }
+.feature-figure img {
+    max-width: 100%;
+}
 
 .footer-logos {
     display: flex;
