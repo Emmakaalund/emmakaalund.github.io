@@ -445,6 +445,7 @@ body::after {
 .subpage-nav {
     display: flex;
     align-items: center;
+    padding-right: 0.5em;
 }
 .subpage-nav a {
     color: white;
