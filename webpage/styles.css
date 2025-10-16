@@ -1,6 +1,6 @@
 /* Responsive Design */
 @media (max-width: 900px) {
-    .mainHeader, .mainFooter, .homepage-container, .vision-header, .vision-feature, .footer-logos, .news-container-wrapper, .news-columns-wrapper, .team-text-container, .team-container, .team-profile-container, .profile-info, .profile-description, .project-header, .project-body, .project-contact, .centered-container {
+    .mainHeader, .mainFooter, .homepage-container, .vision-header, .vision-feature, .footer-logos, .news-container-wrapper, .news-columns-wrapper, .team-header, .team-container, .team-profile-container, .profile-info, .profile-description, .project-header, .project-body, .project-contact, .centered-container {
         width: 95% !important;
         margin: 0 auto !important;
         padding: 1em !important;
@@ -70,7 +70,7 @@
     .scroll-indicator .label {
         font-size: 12px !important;
     }
-    .news-text-container, .contact-text-container, .contact-header {
+    .news-header, .contact-text-container, .contact-header {
         width: 95% !important;
         padding: 1em !important;
     }
@@ -160,7 +160,7 @@ body::after {
 .vision-header {
     margin: 0 auto;
     width: 65%;
-    padding : 2em;
+    padding : 1em;
 }
 .vision-feature {
     display: flex;
@@ -210,10 +210,10 @@ body::after {
 }
 
 /*Team*/
-.team-text-container {
+.team-header {
     margin: 0 auto;
     width: 50%;
-    padding: 2%;
+    padding: 1em;
 }
 .team-container {
     display: flex;
@@ -289,7 +289,7 @@ body::after {
 }
 
 /*News*/
-.news-text-container {
+.news-header {
     margin: 0 auto;
     width: 5%;
     padding: 2%;
@@ -408,20 +408,16 @@ body::after {
     margin: 0 auto;
     width: 50%;
     text-align: left;
-    padding: 2em;
-    
+    padding: 1em;  
 }
 .contact-picture {
-    padding-top: 2em;
     padding-bottom: 2em;
 }
 .contact-picture img {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    max-width: 80%;
+    width: 80%;
+    display: flex;
+    justify-self: center;
     border-radius: 0.5em;
-
 }
 .contact-body-wrapper {
     background-color: whitesmoke;
@@ -497,7 +493,7 @@ body::after {
     background-color: #333;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
-    width: 8em;
+    width: 11em;
 }
 .dropdown:hover .dropdown-content {
     display: block;
@@ -557,7 +553,7 @@ body::after {
     flex-wrap: wrap;
     width: 50%;
     margin: 0 auto;
-    padding: 50px;
+    padding: 1em;
 }
 .project-wrapper-body {
     background-color: whitesmoke;
@@ -622,13 +618,13 @@ main {
 
 /* Centered Container */
 .centered-container {
-     display: flex;
-     justify-content: space-between;
-  flex-wrap: wrap;   /* allow wrapping to next line */
-  margin: 0 auto;
-  width: 50%;
-  text-align: left;
-  gap: 1em; 
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;   /* allow wrapping to next line */
+    margin: 0 auto;
+    width: 50%;
+    text-align: left;
+    gap: 1em; 
 }
 
 /* Scroll progress indicator styles */
