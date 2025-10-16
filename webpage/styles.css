@@ -414,13 +414,14 @@ body::after {
 .contact-picture {
     padding-top: 2em;
     padding-bottom: 2em;
-     img {
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-        max-width: 80%;
-        border-radius: 0.5em;
-    }
+}
+.contact-picture img {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 80%;
+    border-radius: 0.5em;
+
 }
 .contact-body-wrapper {
     background-color: whitesmoke;
