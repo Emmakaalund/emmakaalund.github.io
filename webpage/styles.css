@@ -168,10 +168,10 @@ body::after {
     margin: 0 auto;
     padding: 2em;
     width: 65%;
-    img {
-        max-width: 20em;
-        border-radius: 0.2em;
-    }
+}
+.vision-feature img {
+    max-width: 20em;
+    border-radius: 0.2em;
 }
 .feature-text {
     width: 60%;
@@ -182,15 +182,7 @@ body::after {
     font-size: 1.5em;
     text-align: center;
 }
-.feature-figure {
-    max-width: 35%;
-    img {
-        max-width: 100%;
-    }
-}
-.feature-figure img {
-    max-width: 100%;
-}
+
 
 .footer-logos {
     display: flex;
