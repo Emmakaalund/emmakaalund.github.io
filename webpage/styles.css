@@ -584,9 +584,10 @@ body::after {
     margin: 0 auto;
     gap: 10px;
     color: black;
+    background-color: green;
 }
 .project-contact img {
-    width: 10%;
+    max-width: 10%;
     height: auto;
 }
 .project-status{
