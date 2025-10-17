@@ -345,6 +345,21 @@ body::after {
     font-size: 1em;
 }
 
+.news-item-activity {
+    background: white;
+    border-radius: 0.3em;
+    box-shadow: 0 0.1em 0.3em rgba(0,0,0,0.07);
+    padding: 1em;
+}
+.news-item-activity h3 {
+    margin: 0 0 0.5em 0;
+    font-size: 1.1em;
+}
+.news-item-activity p {
+    margin: 0;
+    font-size: 1em;
+}
+
 /* Pagination styles */
 .pagination {
     display: flex;
